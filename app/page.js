@@ -5,10 +5,6 @@ import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
 export default function Home() {
   const [messages, setMessages] = useState([])
-  // const [messages, setMessages] = useState([{
-  //   text: `Hi, I'm your assistant, here to help you with any life situation you are going through. What would you like advise on today?`,
-  //   role: 'bot',
-  // }])
   const [userInput, setUserInput] = useState('')
   const [chat, setChat] = useState(null)
   const [error, setError] = useState(null)
