@@ -9,7 +9,7 @@ export default function Home() {
   const [chat, setChat] = useState(null)
   const [error, setError] = useState(null)
 
-  const API_KEY = GOOGLE_APPLICATION_CREDENTIALS
+  const API_KEY = process.env.GOOGLE_APPLICATION_CREDENTIALS
   const MODEL_NAME = 'gemini-1.5-flash'
 
   const genai = new GoogleGenerativeAI(API_KEY)
