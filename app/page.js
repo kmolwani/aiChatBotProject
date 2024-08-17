@@ -13,7 +13,7 @@ export default function Home() {
   const [chat, setChat] = useState(null)
   const [error, setError] = useState(null)
 
-  const API_KEY = process.env.NEXT_PUBLIC_API_KEY
+  const API_KEY = process.env.API_KEY
   // console.log('API_KEY', process.env.API_KEY)
   console.log('process.env', process.env)
   const MODEL_NAME = 'gemini-1.5-flash'
