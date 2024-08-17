@@ -2,7 +2,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai"
 import { useEffect, useState } from "react"
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
-import { NextResponse } from 'next/server';
 
 export default function Home() {
   const [messages, setMessages] = useState([])
@@ -14,7 +13,9 @@ export default function Home() {
   const [chat, setChat] = useState(null)
   const [error, setError] = useState(null)
 
-  const API_KEY = process.env.API_KEY
+  const API_KEY = process.env.NEXT_PUBLIC_API_KEY
+  // console.log('API_KEY', process.env.API_KEY)
+  console.log('process.env', process.env)
   const MODEL_NAME = 'gemini-1.5-flash'
 
   const genai = new GoogleGenerativeAI(API_KEY)
